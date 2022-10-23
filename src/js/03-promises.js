@@ -27,8 +27,8 @@ function createPromise(position, delay) {
 function onFormSubmit(event) { 
   event.preventDefault();
   let delay = Number(event.currentTarget.delay.value)
-  let step = Number(event.currentTarget.delay.value);
-  let amount = Number(event.currentTarget.delay.value);
+  let step = Number(event.currentTarget.step.value);
+  let amount = Number(event.currentTarget.amount.value);
   for (let position = 1; position <= amount; position += 1) { 
     createPromise(position, delay)
     .then(({ position, delay }) => {
